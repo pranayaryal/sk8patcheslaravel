@@ -1,0 +1,90 @@
+
+/*# sourceMappingURL=app.css.map */
+body {
+    background-image: url('http://wallpaperswide.com/download/skateboard_logos-wallpaper-1024x1024.jpg');
+}
+
+
+html {
+    background: url('http://wallpapersdesk.net/wp-content/uploads/2015/07/3109_skateboarding.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.main-header {
+    font-family: 'Bangers', cursive;
+    text-shadow: 3px 3px black;
+    text-align: center;
+    color: #32CD32;
+    font-size: 350%;
+    font-weight: ultra-bold;
+}
+
+.top-bar{
+    background-color: black;
+}
+
+#header, #header2, #header3 {
+    color: white;
+    font-size: 200%;
+    font-weight: bold;
+    font-family: 'Bangers', cursive;
+}
+#m, #o, #g, #d, #z {
+    font-family: 'Lato', sans-serif;
+    font-weight: bolder;
+    color: #32CD32;
+}
+#v, #e, #n, #c, #t, #l{
+    display: inline;
+    padding-left: 20%;
+    font-size: 150%;
+    font-family: 'Bangers', cursive;
+
+    text-shadow: 1px 1px #32CD32;
+}
+h4{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color:   white;
+    text-shadow: 2px 2px #32CD32;
+}
+h5{
+    font-family: 'Lato', sans-serif;
+    color: blue;
+    font-weight: bold;
+    text-shadow: 1px 1px #32CD32;
+}
+.transbox {
+    margin: 30px;
+    background-color: #ffffff;
+    border: 1px solid  #32CD32;
+    opacity: 0.8;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+}
+/* catalog page css */
+.main-image{
+    padding-left: 15%;
+}
+#cat-header{
+    padding-left: 30%;
+}
+.secondary-content{
+    font-size: 250%;
+}
+.sub-content{
+    text-shadow: 2px 2px #32CD32;
+    text-align: center;
+    color: white;
+    font-size: 250%;
+    font-weight: bold;
+}
+.copyright{
+    text-shadow: 2px 2px #32CD32;
+    text-align: center;
+    color: white;
+    font-size: 100%;
+    font-weight: bold;
+}

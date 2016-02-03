@@ -1,0 +1,1 @@
+{"version":3,"sources":["vuecodes.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA;AACA;AACA;AACA","file":"vuecodes.js","sourcesContent":["Vue.component('payform', {\r\n    template: '#payment-form'\r\n})\r\n\r\nnew Vue({\r\n    el: 'body'\r\n})"],"sourceRoot":"/source/"}
