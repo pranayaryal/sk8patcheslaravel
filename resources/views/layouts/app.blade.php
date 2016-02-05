@@ -10,6 +10,7 @@
     <!-- Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/libs.css">
 
     <!-- Styles -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
@@ -26,6 +27,8 @@
     </style>
 </head>
 <body id="app-layout">
+
+
     <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
@@ -40,7 +43,7 @@
 
                 <!-- Branding Image -->
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    Laravel
+                   SK8PATCHES
                 </a>
             </div>
 
@@ -52,6 +55,9 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ url('/about') }}">About</a></li>
+                    <li><a href="{{ url('/store') }}">Store</a></li>
+                    <li><a href="{{ url('/contact') }}">Contact</a></li>
                     <!-- Authentication Links -->
                     @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Login</a></li>
@@ -65,8 +71,11 @@
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
                             </ul>
+
                         </li>
                     @endif
+
+
                 </ul>
             </div>
         </div>
@@ -77,6 +86,8 @@
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="/js/libs.js"></script>
+    @include('flash')
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
 </html>

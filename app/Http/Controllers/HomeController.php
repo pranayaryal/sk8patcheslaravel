@@ -24,6 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {
+
+        flash()->overlay('Welcome Aboard', 'Thank you for signing up');
         return view('home');
     }
 }

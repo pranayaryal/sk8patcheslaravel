@@ -13,7 +13,13 @@ var elixir = require('laravel-elixir');
 
 elixir(function(mix) {
     mix.scripts(['app.js'], 'public/js/app.js')
-            .scripts(['vuecodes.js'], 'public/js/vuecodes.js');
+            .scripts(['vuecodes.js'], 'public/js/vuecodes.js')
+            .scripts([
+                'libs/sweetalert-dev.js'
+            ], './public/js/libs.js')
+            .styles([
+                'libs/sweetalert.css'
+            ], './public/css/libs.css');
 
 
 });

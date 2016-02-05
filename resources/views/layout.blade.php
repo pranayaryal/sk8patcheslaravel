@@ -9,6 +9,7 @@
     <title>Sk8 Patches</title>
     <link href='https://fonts.googleapis.com/css?family=Bangers|Orbitron' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/normalize.min.css">
+    <link rel="stylesheet" href="/css/libs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/css/foundation.min.css">
     <link href='http://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="styles.css">
@@ -39,7 +40,13 @@
                         <li class="divider"></li>
                         <li><a href="/contact">Contact</a></li>
                         <li class="divider"></li>
-                        <li><a href="">Log in</a></li>
+                        @if(Auth::guest())
+                            <li><a href="{{url('/login')}}">Log in</a></li>
+                            <li><a href="{{url('/register')}}">Register</a></li>
+
+                        @else
+                            <li><a href="{{url('/logout')}}">Log Out</a></li>
+                        @endif
                         <li class="divider"></li>
 
                     </ul>
@@ -76,6 +83,8 @@
 
         <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/5.5.3/js/foundation.min.js"></script>
+        <script src="/js/libs.js"></script>
+        @include('flash')
         <script>//<![CDATA[
             document.write('<script src="//' + (location.hostname || 'localhost') + ':35729/livereload.js?snipver=1"><\/script>')
             //]]></script>
