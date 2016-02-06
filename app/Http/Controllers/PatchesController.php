@@ -27,4 +27,15 @@ class PatchesController extends Controller
 
     }
 
+    public function paypal(Request $request)
+    {
+        dd($request->all());
+
+    }
+
+    public function products()
+    {
+        $product_array = [];
+    }
+
 }

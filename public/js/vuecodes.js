@@ -1,8 +1,23 @@
-Vue.component('payform', {
-    template: '#payment-form'
-})
+new Vue ({
+   el: 'body',
 
-new Vue({
-    el: 'body'
-})
+    data: {
+        a:2,
+
+        checkedPatches : []
+    },
+
+    methods: {
+
+        incrementCart: function () {
+
+            this.a ++;
+        },
+
+        decrementCart: function () {
+            this.a = this.a - 1;
+        }
+    }
+
+});
 //# sourceMappingURL=vuecodes.js.map

@@ -61,6 +61,10 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::post('contact', 'PatchesController@contact');
 
+    Route::post('paypal', 'PatchesController@paypal');
+
+    Route::get('products', 'PatchesController@products');
+
     Route::get('/', function () {
 //    return view('pages.home');
         return view('helo');

@@ -80,7 +80,9 @@
         <!-- JavaScripts -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.16/vue.js"></script>
 <script src="/js/libs.js"></script>
+<script src="/js/vuecodes.js"></script>
 @include('flash')
 {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
