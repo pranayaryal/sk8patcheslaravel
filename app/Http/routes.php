@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 
 
 /*
@@ -17,6 +18,18 @@ Route::get('/', function () {
 //    return view('pages.home');
 
     return view('helo');
+
+});
+
+Route::post('/', function (Request $request) {
+
+    $result = Session::get('user.buttonid');
+    $req = $request['hosted_button_id'];
+
+    Session::put('user.buttonid', [$req, $result]);
+
+
+    die;
 
 });
 

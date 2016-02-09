@@ -30,6 +30,8 @@ class PatchesController extends Controller
     public function paypal(Request $request)
     {
         dd($request->all());
+        dd($request['hosted_button_id']);
+        Session::get('values');
 
     }
 
