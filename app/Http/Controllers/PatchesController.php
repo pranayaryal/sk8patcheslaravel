@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
-use App\Patches;
+use App\Patch;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,7 +14,7 @@ class PatchesController extends Controller
 
     public function index()
     {
-        $patches = Patches::all()->get();
+        $patches = Patch::all()->get();
     }
 
     public function contact(Request $request)

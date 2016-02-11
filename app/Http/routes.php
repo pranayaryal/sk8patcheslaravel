@@ -21,17 +21,13 @@ Route::get('/', function () {
 
 });
 
-Route::post('/', function (Request $request) {
 
-    $result = Session::get('user.buttonid');
-    $req = $request['hosted_button_id'];
-
-    Session::put('user.buttonid', [$req, $result]);
-
-
-    die;
-
+Route::post('/items', function (Request $request)
+{
+    dd($request->all());
 });
+
+
 
 
 
@@ -66,6 +62,11 @@ Route::group(['middleware' => ['web']], function () {
     //
 
     Route::post('charging' , 'StripeChargesController@charge');
+    Route::get('charging' , function ()
+    {
+        return view('payment');
+    });
+
 
     Route::get('contact', function () {
 
@@ -87,24 +88,38 @@ Route::group(['middleware' => ['web']], function () {
 
     });
 
-    Route::controllers([
+    Route::auth();
 
-        'auth' => 'Auth\AuthController',
-        'password' => 'Auth\PasswordController'
+    Route::post('/', function (Request $request) {
 
-    ]);
+//    $result = Session::get('user.buttonid');
+        $req = $request['hosted_button_id'];
 
-//    Route::get('login', 'AuthController@getLogin');
-//
-//    Route::post('login', 'AuthController@postLogin');
-//
-//    Route::get('register', 'AuthController@getRegister');
-//
-//    Route::post('register', 'AuthController@postRegister');
-//
-//    Route::controllers(['password' => 'Auth\PasswordController']);
 
-//    Route::post('password/email', 'PasswordController@postEmail');
+
+        $request->session()->set('buttonid', $req);
+        $request->session()->set('user', Auth::user());
+
+        dd($request->session());
+
+    });
+
+
+
+//    Route::controllers([
+//
+//        'auth' => 'Auth\AuthController',
+//        'password' => 'Auth\PasswordController'
+//
+//    ]);
+
+//    Route::auth();
+
+    Route::get('/addProduct/{productId}', 'CartController@addItem');
+    Route::get('/removeItem/{productId}', 'CartController@removeItem');
+    Route::get('/cart', 'CartController@showCart');
+
+
 
 });
 

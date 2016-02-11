@@ -22,6 +22,7 @@
 
                             <div class="col-md-3">
                                 <form target="paypal" action="{{ url('/') }}" method="post">
+                                    {{csrf_field()}}
                                     <input type="hidden" name="cmd" value="_s-xclick">
                                     <input type="hidden" name="hosted_button_id" value="3WHY4WRMB43Sx">
                                     <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
@@ -32,6 +33,7 @@
                             </div>
                             <div class="col-md-3">
                             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                {{csrf_field()}}
                                 <input type="hidden" name="cmd" value="_s-xclick">
                                 <input type="hidden" name="hosted_button_id" value="UZM77Y5ESJU5S">
                                 <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">

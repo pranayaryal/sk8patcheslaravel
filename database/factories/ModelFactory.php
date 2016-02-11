@@ -20,7 +20,7 @@ $factory->define(App\User::class, function (Faker\Generator $faker) {
     ];
 });
 
-$factory->define(App\Patches::class, function (Faker\Generator $faker) {
+$factory->define(App\Patch::class, function (Faker\Generator $faker) {
     return [
         'patch_name' => $faker->name,
         'price'  => $faker->numberBetween(0,50),
