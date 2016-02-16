@@ -26,7 +26,7 @@ class PatchesController extends Controller
 //            flash()->overlay('Hi', 'You might have to sign up');
 //        }
 
-        $user = User::findOrFail(3);
+       
 
         Mail::send('emails.contact',
             array(
