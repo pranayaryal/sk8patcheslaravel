@@ -53,7 +53,7 @@
         <li data-orbit-slide="headline-3">
             <div class="text-center panel">
                 <h1 class="main-header">Snap Backz and Teez</h1>
-                <h1>Swag Out!</h1>
+                <h1>Swag In!</h1>
                 <p></p>
             </div>
         </li>
