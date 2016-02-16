@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Patch;
+use App\User;
+use Mail;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Auth;
 
@@ -19,10 +21,31 @@ class PatchesController extends Controller
 
     public function contact(Request $request)
     {
-        if (Auth::guest())
-        {
-            flash()->overlay('Hi', 'You might have to sign up');
-        }
+//        if (Auth::guest())
+//        {
+//            flash()->overlay('Hi', 'You might have to sign up');
+//        }
+
+        $user = User::findOrFail(3);
+
+        Mail::send('emails.contact',
+            array(
+                'name' => $request->get('name'),
+                'email' => $request->get('email'),
+                'user_message' => $request->get('comments')
+            ), function($message)
+            {
+                $message->from('drpranayaryal@gmail.com');
+                $message->to('drpranayaryal@gmail.com', 'Admin')->subject('Feedback from a customer');
+            });
+
+        flash()->overlay('Thanks', 'Your message was sent');
+
+        return view('home');
+
+
+
+
 
 
     }

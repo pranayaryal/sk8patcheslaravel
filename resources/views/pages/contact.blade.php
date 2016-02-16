@@ -7,6 +7,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">Send Us A Word</div>
                     <div class="panel-body">
+
                         <form class="form-horizontal" role="form" method="POST" action="{{ url('/contact') }}">
                             {!! csrf_field() !!}
 
@@ -17,7 +18,7 @@
                                     <input type="text" class="form-control" name="name" value="{{ old('name') }}">
 
                                     @if ($errors->has('name'))
-                                        <span class="help-block">
+                                           <span class="help-block">
                                         <strong>{{ $errors->first('name') }}</strong>
                                     </span>
                                     @endif
