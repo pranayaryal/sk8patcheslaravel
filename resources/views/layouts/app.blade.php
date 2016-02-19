@@ -55,6 +55,7 @@
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
+                    <li><a href="{{ url('/admin') }}">Admin</a></li>
                     <li><a href="{{ url('/about') }}">About</a></li>
                     <li><a href="{{ url('/store') }}">Stores</a></li>
                     <li><a href="{{ url('/contact') }}">Contact</a></li>

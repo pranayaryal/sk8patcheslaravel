@@ -21,10 +21,7 @@ class CreatePatchesTable extends Migration
             $table->string('description');
             $table->timestamps();
 
-            $table->foreign('user_id')
-                ->references('id')
-                ->on('users')
-                ->onDelete('cascade');
+
         });
     }
 

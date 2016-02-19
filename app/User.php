@@ -18,6 +18,11 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
+
+    protected $casts = [
+        'admin' => 'boolean'
+    ];
+
     /**
      * The attributes excluded from the model's JSON form.
      *
@@ -30,5 +35,10 @@ class User extends Authenticatable
     protected function patches()
     {
         return $this->hasMany('App\Patches');
+    }
+
+    public function isAdmin()
+    {
+        return $this->admin;
     }
 }

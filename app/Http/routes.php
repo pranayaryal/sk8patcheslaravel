@@ -44,6 +44,11 @@ Route::get('store', function () {
 
 
 
+//Route::get('admin', ['middleware' => ['admin', 'auth'], function (){
+//    return 'you have to be admin';
+//}]);
+
+
 
 //Route::post('charging' , 'StripeChargesController@charge');
 
@@ -60,6 +65,28 @@ Route::get('store', function () {
 
 Route::group(['middleware' => ['web']], function () {
     //
+
+//    Route::get('admin', 'AdminController@index');
+//    Route::post('admin', 'AdminController@checkAdmin');
+
+    Route::get('admin', 'AdminController@index');
+
+    Route::post('admin', 'AdminController@storePatch');
+
+    Route::get('patches/create', 'AdminController@create');
+
+    Route::get('/patches/{patch}', 'AdminController@show');
+
+    Route::get('/patches/{patch}/edit', 'AdminController@edit');
+
+    Route::put('/patches/{patch}', 'AdminController@update');
+
+    Route::delete('/patches/{patch}', 'AdminController@destroy');
+
+
+
+//    Route::get('admin', [ 'middleware' => ['auth', 'admin'], 'AdminController@index']);
+
 
     Route::post('charging' , 'StripeChargesController@charge');
     Route::get('charging' , function ()

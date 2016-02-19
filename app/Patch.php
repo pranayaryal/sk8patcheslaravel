@@ -3,18 +3,24 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use User;
+use App\User;
 
 class Patch extends Model
 {
+    protected $fillable = [
 
-    public function user()
+        'patch_name' ,
+        'price' ,
+        'description'
+    ];
+
+    public function photos()
     {
-        return $this->belongsToMany('App\User');
+        return $this->hasMany('App\Photo');
     }
 
-    public function image()
+    public function addPhotos()
     {
-        return $this->hasMany('App\Image');
+        return $this->photos()->save();
     }
 }

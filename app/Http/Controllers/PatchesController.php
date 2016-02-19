@@ -26,7 +26,7 @@ class PatchesController extends Controller
 //            flash()->overlay('Hi', 'You might have to sign up');
 //        }
 
-       
+
 
         Mail::send('emails.contact',
             array(

@@ -11,6 +11,7 @@
                         <form class="form-horizontal" role="form" method="POST" action="{{ url('/contact') }}">
                             {!! csrf_field() !!}
 
+                                    <!-- Name -->
                             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                                 <label class="col-md-4 control-label">Name</label>
 
@@ -25,6 +26,7 @@
                                 </div>
                             </div>
 
+                            <!-- Email ---->
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                                 <label class="col-md-4 control-label">Email</label>
 
@@ -39,6 +41,7 @@
                                 </div>
                             </div>
 
+                            <!-- Comments -->
                             <div class="form-group{{ $errors->has('comments') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">Comments</label>
 
